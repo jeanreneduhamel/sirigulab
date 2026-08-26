@@ -1,0 +1,10 @@
+Sirigu Lab Website v1.0 — technical QA report
+
+HTML pages checked: 6
+Local references checked: 108
+External links present: 36
+Mailto links present: 15
+Missing local references: 0
+Duplicate ID issues: 0
+
+No blocking static-reference/accessibility-structure issues found in this pass.
