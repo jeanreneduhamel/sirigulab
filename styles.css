@@ -61,7 +61,7 @@ html{scroll-padding-top:74px}
 
 /* OxytocINspace v0.11 refinements */
 .project-hero-inner{position:relative;padding-top:74px}
-.standalone-erc-logo{position:absolute;right:0;top:0;width:370px!important;height:auto!important;object-fit:contain;background:transparent!important;z-index:2}
+.standalone-erc-logo{position:absolute;right:0;top:0;width:620px!important;height:auto!important;object-fit:contain;background:transparent!important;z-index:2}
 .project-top{padding-top:0}
 .team-heading{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--muted);margin:0 0 18px;text-transform:uppercase}
 .project-grid .project-card:nth-child(2) img{display:block;width:calc(100% + 18px);max-width:none;margin-left:-18px;margin-right:0;margin-top:0;object-position:left top}
@@ -71,7 +71,7 @@ html{scroll-padding-top:74px}
 /* Align the Central Idea visual with the project question, not the main page title. */
 .project-top>.concept{margin-top:102px}
 @media(max-width:900px){.project-top>.concept{margin-top:24px}}
-@media(max-width:700px){.standalone-erc-logo{width:250px!important}}
+@media(max-width:700px){.standalone-erc-logo{width:300px!important}}
 
 /* People page v0.14: bring the team into the initial viewport and add email affordances. */
 .people-page-tight .page-hero{padding-bottom:24px}
@@ -96,3 +96,6 @@ html{scroll-padding-top:74px}
 
 .digital-figure{margin:0;display:grid;grid-template-rows:390px auto}
 .digital-figure .figure-button{height:390px}
+
+/* Homepage institutional logos: visually balanced sizes. */
+.logos img[alt="Institut de Neurosciences de la Timone"]{max-height:105px;max-width:250px}
