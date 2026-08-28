@@ -23,6 +23,9 @@
         frame?.classList.add('is-playing');
         video.play().catch(()=>frame?.classList.remove('is-playing'));
       });
+      video.addEventListener('ended',()=>{
+        frame?.classList.remove('is-playing');
+      });
       video.addEventListener('pointerleave',()=>{
         video.pause();
         try{video.currentTime=0}catch(e){}
