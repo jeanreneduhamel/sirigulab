@@ -19,17 +19,25 @@
   if(canHover){
     document.querySelectorAll('.hover-preview-video').forEach(video=>{
       const frame=video.closest('.video-demo-frame');
-      video.addEventListener('pointerenter',()=>{
-        frame?.classList.add('is-playing');
-        video.play().catch(()=>frame?.classList.remove('is-playing'));
+      let playedThisHover=false;
+      video.loop=false;
+      video.removeAttribute('loop');
+      frame?.addEventListener('pointerenter',()=>{
+        if(playedThisHover) return;
+        playedThisHover=true;
+        try{video.currentTime=0}catch(e){}
+        frame.classList.add('is-playing');
+        video.play().catch(()=>{playedThisHover=false;frame.classList.remove('is-playing')});
       });
       video.addEventListener('ended',()=>{
+        video.pause();
         frame?.classList.remove('is-playing');
       });
-      video.addEventListener('pointerleave',()=>{
+      frame?.addEventListener('pointerleave',()=>{
         video.pause();
         try{video.currentTime=0}catch(e){}
-        frame?.classList.remove('is-playing');
+        playedThisHover=false;
+        frame.classList.remove('is-playing');
       });
     });
   }

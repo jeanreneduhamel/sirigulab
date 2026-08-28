@@ -101,17 +101,17 @@ html{scroll-padding-top:74px}
 .logos img[alt="Institut de Neurosciences de la Timone"]{max-height:105px;max-width:250px}
 
 /* DigiTrack interactive demonstration videos */
-.digital-grid{grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr)}
+.digital-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .digitrack-card{grid-template-rows:auto auto auto 1fr}
-.digitrack-media{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(260px,.82fr);gap:24px;align-items:center}
+.digitrack-media{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);gap:16px;align-items:center}
 .digitrack-method{margin:0}
-.digitrack-method .figure-button{height:430px}
-.digitrack-demos{display:grid;gap:18px;align-content:center}
+.digitrack-method .figure-button{height:320px}
+.digitrack-demos{display:grid;gap:12px;align-content:center}
 .video-demo{margin:0;min-width:0}
 .video-demo-frame{position:relative;border-radius:8px;overflow:hidden;background:#000;cursor:zoom-in}
 .video-demo video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000;cursor:zoom-in}
 .video-play-cue{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(15,18,18,.62);color:#fff;font-size:18px;line-height:1;padding-left:3px;pointer-events:none;transition:opacity .18s ease,transform .18s ease}
 .video-demo-frame:hover .video-play-cue,.video-demo-frame.is-playing .video-play-cue{opacity:0;transform:translate(-50%,-50%) scale(.9)}
 .video-demo figcaption,.digitrack-method figcaption{font-size:.82rem;color:var(--muted);line-height:1.35;margin-top:8px}
-@media(max-width:1180px){.digital-grid{grid-template-columns:1fr}.digitrack-media{grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr)}}
+@media(max-width:980px){.digital-grid{grid-template-columns:1fr}.digitrack-media{grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr)}}
 @media(max-width:760px){.digitrack-media{grid-template-columns:1fr}.digitrack-method .figure-button{height:320px}.digitrack-demos{grid-template-columns:1fr;gap:16px}}
