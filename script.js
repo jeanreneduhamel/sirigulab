@@ -15,6 +15,21 @@
     if(boxCaption) boxCaption.textContent=captionFor(el);
     box.classList.add('open');document.body.style.overflow='hidden';
   }));
+  const canHover=window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(canHover){
+    document.querySelectorAll('.hover-preview-video').forEach(video=>{
+      const frame=video.closest('.video-demo-frame');
+      video.addEventListener('pointerenter',()=>{
+        frame?.classList.add('is-playing');
+        video.play().catch(()=>frame?.classList.remove('is-playing'));
+      });
+      video.addEventListener('pointerleave',()=>{
+        video.pause();
+        try{video.currentTime=0}catch(e){}
+        frame?.classList.remove('is-playing');
+      });
+    });
+  }
   document.querySelectorAll('[data-lightbox-video]').forEach(el=>el.addEventListener('click',()=>{
     if(!box||!boxVideo)return;
     boxImg.style.display='none';boxImg.removeAttribute('src');
